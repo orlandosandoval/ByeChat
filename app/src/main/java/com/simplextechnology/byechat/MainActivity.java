@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         genders.add("Femenino");
         genders.add("Masculino");
         genders.add("Otro");
+        genders.add("Orlando es marica");
+
+
         ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,genders);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerGender.setAdapter(arrayAdapter);
