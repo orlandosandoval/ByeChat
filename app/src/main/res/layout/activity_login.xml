@@ -15,6 +15,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
         android:text="ByeChat"
+        android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/text_big" />
 
