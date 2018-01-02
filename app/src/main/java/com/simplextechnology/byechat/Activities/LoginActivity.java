@@ -1,9 +1,11 @@
-package com.simplextechnology.byechat;
+package com.simplextechnology.byechat.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.simplextechnology.byechat.R;
 
 import java.util.ArrayList;
 import java.util.List;

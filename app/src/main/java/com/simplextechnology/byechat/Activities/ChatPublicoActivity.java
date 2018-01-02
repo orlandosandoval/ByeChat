@@ -1,7 +1,9 @@
-package com.simplextechnology.byechat;
+package com.simplextechnology.byechat.Activities;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -10,6 +12,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.simplextechnology.byechat.Fragments.ChatPublicoFragment;
+import com.simplextechnology.byechat.R;
+
 
 public class ChatPublicoActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -84,21 +90,58 @@ public class ChatPublicoActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_publicChat) {
-
+            setFragment(0);
+        } else if (id == R.id.nav_peopleConnected) {
+            setFragment(1);
         } else if (id == R.id.nav_privateChat) {
-
+            setFragment(2);
         } else if (id == R.id.nav_changeName) {
-
+            setFragment(3);
         } else if (id == R.id.nav_signOut) {
-
+            setFragment(4);
         } else if (id == R.id.nav_settings) {
-
+            setFragment(5);
         } else if (id == R.id.nav_help) {
-
+            setFragment(6);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    private void setFragment(int pos) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+        switch (pos) {
+            case 0:
+                ChatPublicoFragment fragmentChatPublico = new ChatPublicoFragment();
+                transaction.replace(R.id.fragment, fragmentChatPublico);
+                transaction.commit();
+                Toast.makeText(ChatPublicoActivity.this, "Hola: " + R.id.nav_publicChat, Toast.LENGTH_LONG).show();
+                break;
+            case 1:
+                break;
+
+            case 2:
+                break;
+
+            case 3:
+                break;
+
+            case 4:
+                break;
+
+            case 5:
+                break;
+
+            case 6:
+                break;
+
+        }
+
+
+    }
+
 }

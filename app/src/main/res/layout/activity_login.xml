@@ -7,7 +7,7 @@
     android:background="@color/loginBackground"
     android:orientation="vertical"
     android:padding="50dp"
-    tools:context="com.simplextechnology.byechat.LoginActivity">
+    tools:context="com.simplextechnology.byechat.Activities.LoginActivity">
 
     <TextView
         android:layout_width="match_parent"

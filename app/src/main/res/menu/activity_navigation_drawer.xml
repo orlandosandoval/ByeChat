@@ -4,9 +4,15 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_publicChat"
             android:icon="@drawable/ic_menu_people"
+            android:title="Chat publico" />
+
+        <item
+            android:id="@+id/nav_peopleConnected"
+            android:icon="@drawable/ic_people_connected"
             android:title="Conectados" />
         <item
             android:id="@+id/nav_privateChat"
