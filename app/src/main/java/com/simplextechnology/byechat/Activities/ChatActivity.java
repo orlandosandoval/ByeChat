@@ -13,18 +13,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.simplextechnology.byechat.Fragments.AjustesFragment;
+import com.simplextechnology.byechat.Fragments.AyudaFragment;
+import com.simplextechnology.byechat.Fragments.CambiarNombreFragment;
+import com.simplextechnology.byechat.Fragments.ChatPrivadoFragment;
 import com.simplextechnology.byechat.Fragments.ChatPublicoFragment;
 import com.simplextechnology.byechat.Fragments.ConectadosFragment;
+import com.simplextechnology.byechat.Fragments.DesconectarFragment;
 import com.simplextechnology.byechat.R;
 
 
-public class ChatPublicoActivity extends AppCompatActivity
+public class ChatActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_publico);
+        setContentView(R.layout.activity_chat);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -35,6 +40,7 @@ public class ChatPublicoActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
+        onNavigationItemSelected(navigationView.getMenu().getItem(0));
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -75,7 +81,7 @@ public class ChatPublicoActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            //Toast.makeText(ChatPublicoActivity.this,"Settings selected",Toast.LENGTH_LONG).show();
+            //Toast.makeText(ChatActivity.this,"Settings selected",Toast.LENGTH_LONG).show();
             return true;
         }
 
@@ -118,29 +124,36 @@ public class ChatPublicoActivity extends AppCompatActivity
         switch (pos) {
             case 0:
                 ChatPublicoFragment fragmentChatPublico = new ChatPublicoFragment();
-                transaction.replace(R.id.fragment, fragmentChatPublico);
-                transaction.commit();
-                Toast.makeText(ChatPublicoActivity.this, "Hola: " + R.id.nav_publicChat, Toast.LENGTH_LONG).show();
+                transaction.replace(R.id.fragment, fragmentChatPublico).commit();
                 break;
             case 1:
                 ConectadosFragment fragmentConectados = new ConectadosFragment();
-                transaction.replace(R.id.fragment, fragmentConectados);
-                transaction.commit();
+                transaction.replace(R.id.fragment, fragmentConectados).commit();
                 break;
 
             case 2:
+                ChatPrivadoFragment fragmentChatPrivate = new ChatPrivadoFragment();
+                transaction.replace(R.id.fragment, fragmentChatPrivate).commit();
                 break;
 
             case 3:
+                CambiarNombreFragment fragmentCambiarNombre = new CambiarNombreFragment();
+                transaction.replace(R.id.fragment, fragmentCambiarNombre).commit();
                 break;
 
             case 4:
+                DesconectarFragment fragmentDesconectar = new DesconectarFragment();
+                transaction.replace(R.id.fragment, fragmentDesconectar).commit();
                 break;
 
             case 5:
+                AjustesFragment fragmentAjustes = new AjustesFragment();
+                transaction.replace(R.id.fragment, fragmentAjustes).commit();
                 break;
 
             case 6:
+                AyudaFragment fragmentAyuda = new AyudaFragment();
+                transaction.replace(R.id.fragment, fragmentAyuda).commit();
                 break;
 
         }

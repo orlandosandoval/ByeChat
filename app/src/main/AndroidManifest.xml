@@ -13,7 +13,7 @@
             android:name=".Activities.LoginActivity"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".Activities.ChatPublicoActivity"
+            android:name=".Activities.ChatActivity"
             android:label="@string/title_activity_navigation"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
