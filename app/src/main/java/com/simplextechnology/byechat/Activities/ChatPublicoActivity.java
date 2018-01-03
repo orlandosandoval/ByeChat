@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.simplextechnology.byechat.Fragments.ChatPublicoFragment;
+import com.simplextechnology.byechat.Fragments.ConectadosFragment;
 import com.simplextechnology.byechat.R;
 
 
@@ -122,6 +123,9 @@ public class ChatPublicoActivity extends AppCompatActivity
                 Toast.makeText(ChatPublicoActivity.this, "Hola: " + R.id.nav_publicChat, Toast.LENGTH_LONG).show();
                 break;
             case 1:
+                ConectadosFragment fragmentConectados = new ConectadosFragment();
+                transaction.replace(R.id.fragment, fragmentConectados);
+                transaction.commit();
                 break;
 
             case 2:

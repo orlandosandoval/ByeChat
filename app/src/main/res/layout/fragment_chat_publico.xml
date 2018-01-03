@@ -4,8 +4,7 @@
     android:id="@+id/fragment_publico"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.simplextechnology.byechat.Activities.ChatPublicoActivity">
+    android:orientation="vertical">
 
     <TextView
         android:text="Fragment chat publico"

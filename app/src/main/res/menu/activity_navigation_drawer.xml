@@ -8,7 +8,8 @@
         <item
             android:id="@+id/nav_publicChat"
             android:icon="@drawable/ic_menu_people"
-            android:title="Chat publico" />
+            android:title="Chat publico"
+            android:checked="true" />
 
         <item
             android:id="@+id/nav_peopleConnected"
